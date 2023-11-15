@@ -144,7 +144,7 @@ input, select, textarea {
 		}
 
 	body {
-		color: #212931;
+		color: #ffffff;
 	}
 
 	body, input, select, textarea {
@@ -288,11 +288,11 @@ input, select, textarea {
 	}
 
 	input, select, textarea {
-		color: #212931;
+		color: #ffffff;
 	}
 
 	a {
-		color: #212931;
+		color: #ffffff;
 		border-bottom-color: rgba(33, 41, 49, 0.5);
 	}
 
@@ -302,11 +302,11 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #212931;
+		color: #ffffff;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #212931;
+		color: #ffffff;
 	}
 
 	blockquote {
@@ -2206,8 +2206,8 @@ input, select, textarea {
 	button,
 	.button {
 		background-color: transparent;
-		box-shadow: inset 0 0 0 2px #212931;
-		color: #212931 !important;
+		box-shadow: inset 0 0 0 2px #ffffff;
+		color: #ffffff !important;
 	}
 
 		input[type="submit"]:hover,
@@ -2224,7 +2224,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #212931;
+			background-color: #ffffff;
 			box-shadow: none;
 			color: #ffffff !important;
 		}
@@ -2475,7 +2475,7 @@ input, select, textarea {
 	}
 
 	label {
-		color: #212931;
+		color: #ffffff;
 	}
 
 	input[type="text"],
@@ -2500,7 +2500,7 @@ input, select, textarea {
 
 		select option {
 			background-color: #ffffff;
-			color: #212931;
+			color: #ffffff;
 		}
 
 	.select-wrapper:before {
@@ -2509,7 +2509,7 @@ input, select, textarea {
 
 	input[type="checkbox"] + label,
 	input[type="radio"] + label {
-		color: #212931;
+		color: #ffffff;
 	}
 
 		input[type="checkbox"] + label:before,
@@ -2519,8 +2519,8 @@ input, select, textarea {
 
 	input[type="checkbox"]:checked + label:before,
 	input[type="radio"]:checked + label:before {
-		background-color: #212931;
-		border-color: #212931;
+		background-color: #ffffff;
+		border-color: #ffffff;
 		color: #ffffff;
 	}
 
@@ -2618,22 +2618,31 @@ input, select, textarea {
 			top: 0.75rem;
 		}
 
-		.image.fit {
-			display: block;
-			margin: 2.5rem 0;
-			width: 100%;
-		}
-
+				.image.fit {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 2.5rem 0; /* Sets top and bottom margin to 2.5rem, left and right margin to 0 */
+				width: 100%; /* Sets the width to 100% of its container */
+			}
+			
 			.image.fit:first-child {
-				margin-top: 0;
+				margin-top: 0; /* Removes top margin for the first child of .image.fit */
 			}
-
+			
 			.image.fit img {
-				width: 100%;
+				max-width: 100%; /* Ensure the image does not exceed its container's width */
+				max-height: 100%; /* Ensure the image does not exceed its container's height */
+				width: auto; /* Allow the image to scale with its aspect ratio */
+				height: auto; /* Allow the image to scale with its aspect ratio */
+				object-fit: contain; /* Ensures the image is contained within its dimensions */
 			}
+					
 
 		.image.main {
-			display: block;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			margin: 4rem 0;
 			width: 100%;
 		}
@@ -2643,12 +2652,15 @@ input, select, textarea {
 			}
 
 			.image.main img {
-				width: 100%;
+				width: 600px;
+				height:400px;
+				object-fit: cover;
 			}
 
 		@media screen and (max-width: 736px) {
 
-			.image.fit {
+			.image.fit
+			{
 				margin: 2rem 0;
 			}
 
@@ -3084,7 +3096,7 @@ input, select, textarea {
 		}
 
 	table th {
-		color: #212931;
+		color: #ffffff;
 	}
 
 	table thead {
@@ -3193,7 +3205,7 @@ input, select, textarea {
 	}
 
 	.pagination a {
-		color: #212931 !important;
+		color: #ffffff !important;
 	}
 
 		.pagination a:hover {
@@ -3233,9 +3245,9 @@ input, select, textarea {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: #212931;
+			background-color: #000000;
 			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-			background-color: #B4B7FA; /* Replace with your desired color */
+			background-color: #000000; /* Replace with your desired color */
 			background-size: auto,								auto,														100% auto;
 			background-position: center,								center,														top center;
 			background-repeat: repeat,								no-repeat,													no-repeat;
@@ -3284,7 +3296,8 @@ input, select, textarea {
 
 /* Intro */
 
-	#intro {
+	#intro 
+	{
 		color: #ffffff;
 		padding: 8rem 4rem 6rem 4rem ;
 		-moz-align-items: center;
@@ -3757,7 +3770,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #ffffff;
+		background-color: #000000;
 		position: relative;
 		margin: 0 auto;
 		width: calc(100% - 4rem);
@@ -4528,7 +4541,7 @@ input, select, textarea {
 		#navPanelToggle.alt {
 			background-color: rgba(255, 255, 255, 0.875);
 			box-shadow: 0 0.125rem 0.75rem 0 rgba(30, 37, 45, 0.25);
-			color: #212931;
+			color: #ffffff;
 		}
 
 			#navPanelToggle.alt:hover {
@@ -4565,7 +4578,7 @@ input, select, textarea {
 		-webkit-overflow-scrolling: touch;
 		background: #ffffff;
 		box-shadow: none;
-		color: #212931;
+		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
@@ -4621,7 +4634,6 @@ input, select, textarea {
 			right: 0;
 			text-align: right;
 			top: 0;
-			vertical-align: middle;
 			width: 7rem;
 		}
 
@@ -4644,7 +4656,7 @@ input, select, textarea {
 			}
 
 			#navPanel .close:hover {
-				color: #212931;
+				color: #ffffff;
 			}
 
 			@media screen and (max-width: 736px) {
